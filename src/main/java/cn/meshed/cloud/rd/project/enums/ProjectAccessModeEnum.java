@@ -1,0 +1,34 @@
+package cn.meshed.cloud.rd.project.enums;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
+
+/**
+ * <h1>项目级别枚举</h1>
+ *
+ * @author Vincent Vic
+ * @version 1.0
+ */
+@AllArgsConstructor
+@Getter
+@ToString
+public enum ProjectAccessModeEnum {
+
+    /**
+     * 正常研发
+     */
+    NONE(1,"none"),
+    /**
+     * 核心涉密
+     */
+    CORE(2,"core"),
+    /**
+     * 内部开源
+     */
+    INNER_SOURCE(3,"inner_source"),
+    ;
+
+    private final int value;
+    private final String key;
+}
