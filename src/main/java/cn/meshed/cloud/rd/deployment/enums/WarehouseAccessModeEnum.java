@@ -1,11 +1,11 @@
-package cn.meshed.cloud.rd.project.enums;
+package cn.meshed.cloud.rd.deployment.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>服务模板枚举</h1>
+ * <h1>仓库授权模式枚举</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -13,20 +13,16 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum ServiceTemplateEnum {
+public enum WarehouseAccessModeEnum {
 
     /**
-     * 无
+     * 私有
      */
-    NONE(0,"none"),
+    PRIVATE(0,"private"),
     /**
-     * COLA架构
+     * 公开
      */
-    COLA(1,"cola"),
-    /**
-     * 三层架构
-     */
-    MVC(2,"mvc"),
+    PUBLIC(1,"public"),
 
     ;
 

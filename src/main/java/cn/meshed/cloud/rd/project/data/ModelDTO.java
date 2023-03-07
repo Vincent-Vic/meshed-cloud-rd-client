@@ -23,17 +23,9 @@ public class ModelDTO extends DTO {
      */
     private String name;
     /**
-     * 模型英文名
-     */
-    private String enname;
-    /**
      * 模型实体类名
      */
     private String className;
-    /**
-     * 模型实体父类名称
-     */
-    private String superClass;
     /**
      * 版本
      */
@@ -46,10 +38,6 @@ public class ModelDTO extends DTO {
      * 类型
      */
     private ModelTypeEnum type;
-    /**
-     * 详情
-     */
-    private String description;
     /**
      * 模型作用
      */

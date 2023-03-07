@@ -17,11 +17,11 @@ public enum ServiceBehaviorEnum {
     /**
      * Get类型
      */
-    QRY(1,"Qry"),
+    QUERY(1,"Qry"),
     /**
-     * Get类型
+     * 操作类型
      */
-    CMD(2,"Cmd"),
+    COMMAND(2,"Cmd"),
     /**
      * Get类型
      */

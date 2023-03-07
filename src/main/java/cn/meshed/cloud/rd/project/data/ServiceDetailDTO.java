@@ -25,17 +25,9 @@ public class ServiceDetailDTO extends ServiceDTO {
      */
     private String control;
     /**
-     * URI
+     * method
      */
-    private String uri;
-    /**
-     * 请求类型
-     */
-    private RequestTypeEnum requestType;
-    /**
-     * 控制器实体类名
-     */
-    private String className;
+    private String method;
     /**
      * 服务业务行为能力
      */
@@ -43,7 +35,7 @@ public class ServiceDetailDTO extends ServiceDTO {
     /**
      * 服务授权码，用于注册身份安全
      */
-    private ServiceTypeEnum identifier;
+    private String identifier;
     /**
      * 详情
      */

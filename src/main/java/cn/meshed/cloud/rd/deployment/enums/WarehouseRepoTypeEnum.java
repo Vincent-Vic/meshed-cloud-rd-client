@@ -13,29 +13,35 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum WarehouseSourceType {
+public enum WarehouseRepoTypeEnum {
+
+    /**
+     * 未知类型： 无法识别出仓库端
+     */
+    UNKNOWN(1,"unknown"),
 
     /**
      * 云效仓库 系统研发默认方案
      */
-    CODEUP(1,"codeup"),
+    CODEUP(1,"codeup.aliyun.com"),
 
     /**
      * github
      */
-    GITHUB(2,"github"),
+    GITHUB(2,"github.com"),
     /**
      * gitee
      */
-    GITEE(2,"gitee"),
+    GITEE(2,"gitee.com"),
     /**
      * gitlab
      */
-    GITLAB(2,"gitlab"),
+    GITLAB(2,"gitlab.com"),
     /**
      * coding
      */
-    CODING(3,"coding"),
+    CODING(3,"coding.net"),
+
     ;
 
     private final int value;

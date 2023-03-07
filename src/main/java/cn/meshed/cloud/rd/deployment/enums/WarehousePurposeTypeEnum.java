@@ -1,11 +1,11 @@
-package cn.meshed.cloud.rd.project.enums;
+package cn.meshed.cloud.rd.deployment.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>模型类型</h1>
+ * <h1>仓库类型</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -13,28 +13,27 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum ModelTypeEnum {
-
+public enum WarehousePurposeTypeEnum {
     /**
-     *操作模型
+     * 服务
      */
-    COMMAND(1,"Cmd"),
+    SERVICE(1,"IMAGES"),
     /**
-     *查询模型
+     * 前端
      */
-    QUERY(2,"Qry"),
+    PAGE(2,"page"),
     /**
-     *数据模型
+     * 控制台
      */
-    DTO(3,"DTO"),
+    CONSOLE(3,"page"),
     /**
-     *枚举模型
+     * 客户端
      */
-    ENUMS(4,"Enum"),
+    CLIENT(4,"MAVEN"),
     /**
-     *事件模型
+     * 组件
      */
-    EVENT(5,"Event"),
+    ASSEMBLY(5,"MAVEN"),
 
     ;
 

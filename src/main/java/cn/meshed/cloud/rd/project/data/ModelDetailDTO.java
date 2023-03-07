@@ -12,6 +12,19 @@ import java.util.List;
  */
 @Data
 public class ModelDetailDTO extends ModelDTO{
+
+    /**
+     * 模型英文名
+     */
+    private String enname;
+    /**
+     * 模型实体父类名称
+     */
+    private String superClass;
+    /**
+     * 详情
+     */
+    private String description;
     /**
      * 字段列表
      */

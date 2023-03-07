@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>项目级别枚举</h1>
+ * <h1>项目授权模式枚举</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -20,13 +20,17 @@ public enum ProjectAccessModeEnum {
      */
     NONE(1,"none"),
     /**
+     * 公共库
+     */
+    PUBLIC(2,"public"),
+    /**
      * 核心涉密
      */
-    CORE(2,"core"),
+    CORE(3,"core"),
     /**
      * 内部开源
      */
-    INNER_SOURCE(3,"inner_source"),
+    INNER_SOURCE(4,"inner_source"),
     ;
 
     private final int value;

@@ -1,8 +1,10 @@
 package cn.meshed.cloud.rd.deployment.data;
 
-import cn.meshed.cloud.rd.deployment.enums.WarehouseSourceType;
-import cn.meshed.cloud.rd.deployment.enums.WarehouseStatus;
-import cn.meshed.cloud.rd.deployment.enums.WarehouseType;
+import cn.meshed.cloud.rd.deployment.enums.WarehouseAccessModeEnum;
+import cn.meshed.cloud.rd.deployment.enums.WarehouseRelationEnum;
+import cn.meshed.cloud.rd.deployment.enums.WarehouseRepoTypeEnum;
+import cn.meshed.cloud.rd.deployment.enums.WarehouseStatusEnum;
+import cn.meshed.cloud.rd.deployment.enums.WarehousePurposeTypeEnum;
 import com.alibaba.cola.dto.DTO;
 import lombok.Data;
 
@@ -16,36 +18,53 @@ import lombok.Data;
 public class WarehouseDTO extends DTO {
 
     /**
-     * id
+     * uuid
      */
-    private Long id;
+    private String uuid;
+
     /**
-     * 版本项目名称
+     * 中文名称
      */
     private String name;
+
     /**
-     * 版本项目全称代号
+     * 仓库名称
      */
-    private String enname;
+    private String repoName;
+
     /**
-     * 版本
+     * 仓库存储类型（代码仓库）：云效/github/gitee
      */
-    private String version;
+    private WarehouseRepoTypeEnum repoType;
+
     /**
      * 仓库地址
      */
-    private String url;
+    private String repoUrl;
+
     /**
-     * 仓库来源类型
+     * 仓库目的类型（管理仓库）: 服务/客户端/组件/前端
      */
-    private WarehouseSourceType sourceType;
+    private WarehousePurposeTypeEnum purposeType;
+
     /**
-     * 仓库来源类型
+     * 仓库系统关系：自建/登记/导入
      */
-    private WarehouseType type;
+    private WarehouseRelationEnum relation;
+
     /**
-     * 仓库来源类型
+     * 仓库版本号
      */
-    private WarehouseStatus status;
+    private String version;
+
+    /**
+     * 仓库负责人ID
+     */
+    private Long owner;
+
+    /**
+     * 仓库状态
+     */
+    private WarehouseStatusEnum status;
 
 }

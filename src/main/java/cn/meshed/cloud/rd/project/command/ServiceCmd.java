@@ -3,6 +3,7 @@ package cn.meshed.cloud.rd.project.command;
 import cn.meshed.cloud.rd.project.data.RequestBodyFieldDTO;
 import cn.meshed.cloud.rd.project.data.RequestParamFieldDTO;
 import cn.meshed.cloud.rd.project.data.ResponsesFieldDTO;
+import cn.meshed.cloud.rd.project.enums.OperateEnum;
 import cn.meshed.cloud.rd.project.enums.RequestTypeEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceBehaviorEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
@@ -20,6 +21,23 @@ import java.util.List;
 @Data
 public class ServiceCmd extends Command {
 
+    /**
+     * uuid
+     */
+    private String uuid;
+    /**
+     * 项目key
+     */
+    private String projectKey;
+    /**
+    /**
+     * 项目method
+     */
+    private String method;
+    /**
+     * 操作类型
+     */
+    private OperateEnum operate;
     /**
      * 模型中文名
      */

@@ -36,6 +36,10 @@ public enum RequestTypeEnum {
      * Patch类型
      */
     PATCH(5,"patch"),
+    /**
+     * RPC类型 非Http请求类型
+     */
+    RPC(5,"patch"),
     ;
 
     private final int value;

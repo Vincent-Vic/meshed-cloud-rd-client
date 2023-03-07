@@ -23,7 +23,7 @@ public interface DomainAdapter {
     /**
      * 领域统计
      * @param projectKey 项目key
-     * @return {@link SingleResponse < ProjectDetailDTO >}
+     * @return {@link SingleResponse<List<String>>}
      */
     @GetMapping("/select/{projectKey}")
     SingleResponse<List<String>> select(@PathVariable("projectKey") String projectKey);
@@ -31,7 +31,7 @@ public interface DomainAdapter {
     /**
      * 领域统计
      * @param domainCmd 项目key
-     * @return {@link SingleResponse < ProjectDetailDTO >}
+     * @return {@link Response}
      */
     @PostMapping("/add")
     Response add(@Valid DomainCmd domainCmd);

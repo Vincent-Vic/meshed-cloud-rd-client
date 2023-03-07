@@ -17,7 +17,7 @@ public enum ServiceTypeEnum {
     /**
      * RESTful类型
      */
-    API(1,"Ctr"),
+    API(1,"Adapter"),
     /**
      *dubbo类型
      */

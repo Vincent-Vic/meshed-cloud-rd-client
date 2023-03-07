@@ -1,5 +1,6 @@
 package cn.meshed.cloud.rd.project.data;
 
+import cn.meshed.cloud.rd.project.enums.BaseGenericsEnum;
 import com.alibaba.cola.dto.DTO;
 import lombok.Data;
 
@@ -23,7 +24,7 @@ public class BaseFieldDTO extends DTO {
     /**
      * 泛型
      */
-    private String generic;
+    private BaseGenericsEnum generic;
     /**
      * 描述
      */

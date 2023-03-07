@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>项目类型</h1>
+ * <h1>服务授权模式枚举</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -13,19 +13,20 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum ProjectTypeEnum {
+public enum ServiceAccessModeEnum {
+
     /**
-     * 应用服务
+     * 匿名
      */
-    SERVICE(1,"service"),
+    ANONYMOUS(0,"anonymous"),
     /**
-     * 组件设施
+     * 登入
      */
-    ASSEMBLY(2,"assembly"),
+    LOGIN(1,"login"),
     /**
-     * 生态设施
+     * 授权
      */
-    INFRASTRUCTURE(3,"infrastructure"),
+    AUTHORIZE(3,"authorize"),
     ;
 
     private final int value;

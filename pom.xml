@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cn.meshed.base</groupId>
+        <groupId>cn.meshed.cloud</groupId>
         <artifactId>meshed-base-parent</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -11,19 +11,24 @@
     <groupId>cn.meshed.cloud.rd</groupId>
     <artifactId>meshed-cloud-rd-client</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
     <name>meshed-cloud-rd-client</name>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <cola-component-dto.version>4.3.1</cola-component-dto.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
-        <meshed-cloud-constant-starter.version>1.0.0-SNAPSHOT</meshed-cloud-constant-starter.version>
+        <meshed-cloud-dto.version>1.0.0-SNAPSHOT</meshed-cloud-dto.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.alibaba.cola</groupId>
-            <artifactId>cola-component-dto</artifactId>
+            <groupId>cn.meshed.cloud</groupId>
+            <artifactId>meshed-cloud-dto</artifactId>
+            <version>${meshed-cloud-dto.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
@@ -36,13 +41,31 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>cn.meshed.base</groupId>
-            <artifactId>meshed-cloud-constant-starter</artifactId>
-            <version>${meshed-cloud-constant-starter.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.24</version>
+        </dependency>
     </dependencies>
+    <!-- Source attach plugin -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

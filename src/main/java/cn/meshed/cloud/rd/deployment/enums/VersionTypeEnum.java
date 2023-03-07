@@ -13,7 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum VersionType {
+public enum VersionTypeEnum {
     /**
      * 制品库
      */

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>前端页面模板枚举</h1>
+ * <h1>模型授权模式枚举</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -13,15 +13,20 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum PageTemplateEnum {
+public enum ModelAccessModeEnum {
+
     /**
-     * 无
+     * 私有
      */
-    NONE(0,"none"),
+    PRIVATE(0,"private"),
     /**
-     * Ant Design Pro
+     * 公开
      */
-    ANT_DESIGN_PRO(1,"ant_design_pro"),
+    PUBLIC(1,"public"),
+    /**
+     * 保护 项目内可见
+     */
+    PROTECTED(2,"protected"),
 
     ;
 

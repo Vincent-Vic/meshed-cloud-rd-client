@@ -1,7 +1,8 @@
 package cn.meshed.cloud.rd.project.query;
 
+import cn.meshed.cloud.rd.project.enums.ProjectAccessModeEnum;
 import cn.meshed.cloud.rd.project.enums.ProjectTypeEnum;
-import cn.meshed.cloud.rd.project.enums.ReleaseStatusEnum;
+import cn.meshed.cloud.rd.project.enums.ProjectVisitTypeEnum;
 import com.alibaba.cola.dto.PageQuery;
 import lombok.Data;
 
@@ -12,7 +13,7 @@ import lombok.Data;
  * @version 1.0
  */
 @Data
-public class ServiceQry extends PageQuery {
+public class ProjectPageQry extends PageQuery {
 
     /**
      * 关键字
@@ -23,7 +24,11 @@ public class ServiceQry extends PageQuery {
      */
     private ProjectTypeEnum type;
     /**
-     * 发行状态
+     * 级别
      */
-    private ReleaseStatusEnum releaseStatus;
+    private ProjectAccessModeEnum accessMode;
+    /**
+     * 访问类型
+     */
+    private ProjectVisitTypeEnum visitType;
 }

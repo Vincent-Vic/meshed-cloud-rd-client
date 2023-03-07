@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>项目类型</h1>
+ * <h1></h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -13,19 +13,24 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum ProjectTypeEnum {
+public enum OperateEnum {
+
     /**
-     * 应用服务
+     * 创建
      */
-    SERVICE(1,"service"),
+    NEW(1,"new"),
     /**
-     * 组件设施
+     * 编辑
      */
-    ASSEMBLY(2,"assembly"),
+    EDIT(2, "edit"),
     /**
-     * 生态设施
+     * 读取
      */
-    INFRASTRUCTURE(3,"infrastructure"),
+    READ(3, "read"),
+    /**
+     * 复制
+     */
+    COPY(4, "copy"),
     ;
 
     private final int value;

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>仓库类型</h1>
+ * <h1></h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -13,28 +13,20 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum WarehouseType {
-    /**
-     * 服务
-     */
-    SERVICE(1,"IMAGES"),
-    /**
-     * 前端
-     */
-    PAGE(2,"page"),
-    /**
-     * 控制台
-     */
-    CONSOLE(3,"page"),
-    /**
-     * 客户端
-     */
-    CLIENT(4,"MAVEN"),
-    /**
-     * 组件
-     */
-    ASSEMBLY(5,"MAVEN"),
+public enum WarehouseRelationEnum {
 
+    /**
+     * 平台构建
+     */
+    BUILD(1,"build"),
+    /**
+     * 其他仓库导入
+     */
+    IMPORT(2,"import"),
+    /**
+     * 不具备导入条件仅为登记
+     */
+    REGISTER(3,"register"),
     ;
 
     private final int value;

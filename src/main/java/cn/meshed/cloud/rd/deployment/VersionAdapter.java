@@ -1,7 +1,7 @@
 package cn.meshed.cloud.rd.deployment;
 
 import cn.meshed.cloud.rd.deployment.data.VersionDTO;
-import cn.meshed.cloud.rd.deployment.query.VersionQry;
+import cn.meshed.cloud.rd.deployment.query.VersionPageQry;
 import com.alibaba.cola.dto.PageResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,10 +20,11 @@ public interface VersionAdapter {
 
     /**
      * 版本列表
-     * @param projectKey
-     * @param versionQry
+     *
+     * @param projectKey     项目key
+     * @param versionPageQry 版本分页查询
      * @return
      */
     @GetMapping("/list/{projectKey}")
-    PageResponse<VersionDTO> list(@PathVariable("projectKey") String projectKey, @Valid VersionQry versionQry);
+    PageResponse<VersionDTO> list(@PathVariable("projectKey") String projectKey, @Valid VersionPageQry versionPageQry);
 }

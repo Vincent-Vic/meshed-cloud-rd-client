@@ -1,8 +1,12 @@
 package cn.meshed.cloud.rd.project.command;
 
+import cn.meshed.cloud.rd.project.data.RequestParamFieldDTO;
 import cn.meshed.cloud.rd.project.enums.ModelTypeEnum;
+import cn.meshed.cloud.rd.project.enums.OperateEnum;
 import com.alibaba.cola.dto.Command;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * <h1>模型传输模型</h1>
@@ -33,6 +37,14 @@ public class ModelCmd extends Command {
      */
     private String domain;
     /**
+     * 模型所属项目key
+     */
+    private String projectKey;
+    /**
+     * 模型所属项目key
+     */
+    private OperateEnum operate;
+    /**
      * 类型
      */
     private ModelTypeEnum type;
@@ -40,5 +52,7 @@ public class ModelCmd extends Command {
      * 详情
      */
     private String description;
+
+    private List<RequestParamFieldDTO> fields;
 
 }

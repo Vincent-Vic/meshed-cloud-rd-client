@@ -15,6 +15,10 @@ import lombok.ToString;
 @ToString
 public enum ServiceModelStatusEnum {
     /**
+     * 信息登记状态
+     */
+    REGISTER(0,"register"),
+    /**
      *发行状态
      */
     RELEASE(1,"release"),
@@ -38,6 +42,11 @@ public enum ServiceModelStatusEnum {
      *下线状态
      */
     OFF(6,"off"),
+    /**
+     *异常状态
+     */
+    ERROR(7,"error"),
+
     ;
 
     private final int value;

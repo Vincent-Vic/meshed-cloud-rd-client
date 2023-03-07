@@ -1,7 +1,7 @@
 package cn.meshed.cloud.rd.deployment.data;
 
-import cn.meshed.cloud.rd.deployment.enums.VersionStatus;
-import cn.meshed.cloud.rd.deployment.enums.VersionType;
+import cn.meshed.cloud.rd.deployment.enums.VersionStatusEnum;
+import cn.meshed.cloud.rd.deployment.enums.VersionTypeEnum;
 import com.alibaba.cola.dto.DTO;
 import lombok.Data;
 
@@ -32,11 +32,11 @@ public class VersionDTO extends DTO {
     /**
      * 版本类型
      */
-    private VersionType type;
+    private VersionTypeEnum type;
     /**
      * 版本状态
      */
-    private VersionStatus status;
+    private VersionStatusEnum status;
 
 
 }
