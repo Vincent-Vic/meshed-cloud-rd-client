@@ -1,8 +1,6 @@
 package cn.meshed.cloud.rd.project.data;
 
-import cn.meshed.cloud.rd.project.enums.RequestTypeEnum;
-import cn.meshed.cloud.rd.project.enums.ServiceBehaviorEnum;
-import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
+import cn.meshed.cloud.rd.project.enums.RequestModeEnum;
 import lombok.Data;
 
 import java.util.List;
@@ -29,9 +27,9 @@ public class ServiceDetailDTO extends ServiceDTO {
      */
     private String method;
     /**
-     * 服务业务行为能力
+     * 服务请求参数模式
      */
-    private ServiceBehaviorEnum behavior;
+    private RequestModeEnum requestMode;
     /**
      * 服务授权码，用于注册身份安全
      */
@@ -43,11 +41,7 @@ public class ServiceDetailDTO extends ServiceDTO {
     /**
      * 请求参数传输列表
      */
-    private List<RequestParamFieldDTO> requestParams;
-    /**
-     * 请求数据传输列表
-     */
-    private List<RequestBodyFieldDTO> requestBodys;
+    private List<RequestFieldDTO> requests;
     /**
      * 相应字段列表
      */

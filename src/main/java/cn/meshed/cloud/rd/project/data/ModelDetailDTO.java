@@ -28,5 +28,5 @@ public class ModelDetailDTO extends ModelDTO{
     /**
      * 字段列表
      */
-    private List<RequestParamFieldDTO> fields;
+    private List<RequestFieldDTO> fields;
 }

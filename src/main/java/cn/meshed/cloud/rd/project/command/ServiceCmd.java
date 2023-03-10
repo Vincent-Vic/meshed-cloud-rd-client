@@ -1,11 +1,11 @@
 package cn.meshed.cloud.rd.project.command;
 
-import cn.meshed.cloud.rd.project.data.RequestBodyFieldDTO;
-import cn.meshed.cloud.rd.project.data.RequestParamFieldDTO;
+import cn.meshed.cloud.rd.project.data.RequestFieldDTO;
 import cn.meshed.cloud.rd.project.data.ResponsesFieldDTO;
 import cn.meshed.cloud.rd.project.enums.OperateEnum;
 import cn.meshed.cloud.rd.project.enums.RequestTypeEnum;
-import cn.meshed.cloud.rd.project.enums.ServiceBehaviorEnum;
+import cn.meshed.cloud.rd.project.enums.RequestModeEnum;
+import cn.meshed.cloud.rd.project.enums.ServiceAccessModeEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
 import com.alibaba.cola.dto.Command;
 import lombok.Data;
@@ -65,11 +65,11 @@ public class ServiceCmd extends Command {
     /**
      * 服务业务行为能力
      */
-    private ServiceBehaviorEnum behavior;
+    private RequestModeEnum requestMode;
     /**
      * 服务授权码，用于注册身份安全
      */
-    private ServiceTypeEnum identifier;
+    private String identifier;
     /**
      * 详情
      */
@@ -77,13 +77,14 @@ public class ServiceCmd extends Command {
     /**
      * 请求参数传输列表
      */
-    private List<RequestParamFieldDTO> requestParams;
-    /**
-     * 请求数据传输列表
-     */
-    private List<RequestBodyFieldDTO> requestBodys;
+    private List<RequestFieldDTO> requests;
     /**
      * 相应字段列表
      */
     private List<ResponsesFieldDTO> responses;
+
+    /**
+     * 服务访问权限
+     */
+    private ServiceAccessModeEnum accessMode;
 }

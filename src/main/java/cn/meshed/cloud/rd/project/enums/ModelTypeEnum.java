@@ -35,6 +35,10 @@ public enum ModelTypeEnum {
      *事件模型
      */
     EVENT(5,"Event"),
+    /**
+     * 服务参数类型
+     */
+    SERVICE_PARAM(6,"service_param"),
 
     ;
 

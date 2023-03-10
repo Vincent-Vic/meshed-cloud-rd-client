@@ -1,6 +1,6 @@
 package cn.meshed.cloud.rd.project.command;
 
-import cn.meshed.cloud.rd.project.data.RequestParamFieldDTO;
+import cn.meshed.cloud.rd.project.data.RequestFieldDTO;
 import cn.meshed.cloud.rd.project.enums.ModelTypeEnum;
 import cn.meshed.cloud.rd.project.enums.OperateEnum;
 import com.alibaba.cola.dto.Command;
@@ -53,6 +53,6 @@ public class ModelCmd extends Command {
      */
     private String description;
 
-    private List<RequestParamFieldDTO> fields;
+    private List<RequestFieldDTO> fields;
 
 }

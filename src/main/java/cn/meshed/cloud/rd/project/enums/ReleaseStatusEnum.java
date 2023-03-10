@@ -17,21 +17,23 @@ public enum ReleaseStatusEnum {
 
 
     /**
-     *操作模型
+     * 编辑中
      */
     EDIT(1,"edit"),
     /**
-     *操作模型
+     * 待发布
      */
     PROCESSING(2,"processing"),
+
     /**
-     *操作模型
+     * 快照发布
      */
-    REJECT(3,"reject"),
+    SNAPSHOT(3,"snapshot"),
+
     /**
-     *操作模型
+     * 正式发布
      */
-    RELEASE(4,"release"),
+    RELEASE(3,"release"),
 
     ;
 

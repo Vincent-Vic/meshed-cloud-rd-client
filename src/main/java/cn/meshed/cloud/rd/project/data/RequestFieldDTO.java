@@ -9,7 +9,7 @@ import lombok.Data;
  * @version 1.0
  */
 @Data
-public class RequestParamFieldDTO extends BaseFieldDTO{
+public class RequestFieldDTO extends BaseFieldDTO{
 
     /**
      * 模拟数据

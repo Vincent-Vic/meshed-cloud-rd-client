@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1>服务作用枚举</h1>
+ * <h1>请求参数模式</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -13,19 +13,19 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum ServiceBehaviorEnum {
+public enum RequestModeEnum {
     /**
-     * Get类型
+     * 查询
      */
-    QUERY(1,"Qry"),
+    FORM(1,"form"),
     /**
-     * 操作类型
+     * 操作
      */
-    COMMAND(2,"Cmd"),
+    JSON(2,"json"),
     /**
-     * Get类型
+     * 分页
      */
-    PAGE(3,"PageQry"),
+    PAGE(3,"page"),
 
     ;
 
