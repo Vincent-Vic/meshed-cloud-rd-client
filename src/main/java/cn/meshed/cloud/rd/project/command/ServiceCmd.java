@@ -5,6 +5,7 @@ import cn.meshed.cloud.rd.project.data.ResponsesFieldDTO;
 import cn.meshed.cloud.rd.project.enums.OperateEnum;
 import cn.meshed.cloud.rd.project.enums.RequestTypeEnum;
 import cn.meshed.cloud.rd.project.enums.RequestModeEnum;
+import cn.meshed.cloud.rd.project.enums.ResponseModeEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceAccessModeEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
 import com.alibaba.cola.dto.Command;
@@ -26,9 +27,9 @@ public class ServiceCmd extends Command {
      */
     private String uuid;
     /**
-     * 项目key
+     * 服务分组ID
      */
-    private String projectKey;
+    private String groupId;
     /**
     /**
      * 项目method
@@ -63,9 +64,13 @@ public class ServiceCmd extends Command {
      */
     private RequestTypeEnum requestType;
     /**
-     * 服务业务行为能力
+     * 服务请求模式
      */
     private RequestModeEnum requestMode;
+    /**
+     * 服务返回是否合并
+     */
+    private Boolean responseMerge;
     /**
      * 服务授权码，用于注册身份安全
      */

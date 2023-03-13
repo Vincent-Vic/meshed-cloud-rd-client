@@ -1,6 +1,5 @@
 package cn.meshed.cloud.rd.project.query;
 
-import cn.meshed.cloud.rd.project.enums.ModelTypeEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
 import com.alibaba.cola.dto.Query;
 import lombok.Data;
@@ -12,14 +11,18 @@ import lombok.Data;
  * @version 1.0
  */
 @Data
-public class ServiceByMethodQry extends Query {
+public class ServiceByClassNameQry extends Query {
     /**
-     * method
+     * 类型
      */
-    private String method;
+    private ServiceTypeEnum type;
     /**
-     * 服务分组编码
+     * 控制器
      */
-    private String groupId;
+    private String control;
+    /**
+     * 项目key
+     */
+    private String projectKey;
 
 }

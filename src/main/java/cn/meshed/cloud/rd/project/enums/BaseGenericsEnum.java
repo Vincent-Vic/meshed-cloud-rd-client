@@ -18,20 +18,23 @@ public enum BaseGenericsEnum {
     /**
      * 无
      */
-    NONE(0,"none"),
+    NONE(0, "none"),
     /**
      * List<T>
      */
-    LIST(1,"List"),
+    LIST(1, "List"),
     /**
      * Set<T>
      */
-    SET(2,"Set"),
+    SET(2, "Set"),
     /**
      * 路径参数（节约成本借用选项）
      */
-    PATH_VARIABLE(3,"pathVariable")
-    ;
+    PATH_VARIABLE(3, "pathVariable"),
+    /**
+     * 路径参数（节约成本借用选项）
+     */
+    JSON(4, "json");
 
     private final int value;
     private final String key;

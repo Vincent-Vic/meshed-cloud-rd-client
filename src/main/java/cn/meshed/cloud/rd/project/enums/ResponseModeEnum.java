@@ -13,23 +13,19 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum RequestModeEnum {
+public enum ResponseModeEnum {
     /**
-     * 多参数
+     * 单参数
      */
-    MULTIPLE(1,"multiple"),
+    SINGLE(1,"single"),
     /**
-     * 表单
+     * 合并
      */
-    FORM(2,"form"),
-    /**
-     * JSON
-     */
-    JSON(3,"json"),
+    MERGE(2,"merge"),
     /**
      * 分页
      */
-    PAGE(4,"page"),
+    PAGE(3,"page"),
 
     ;
 

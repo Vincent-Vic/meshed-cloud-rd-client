@@ -36,9 +36,29 @@ public enum ModelTypeEnum {
      */
     EVENT(5,"Event"),
     /**
-     * 服务参数类型
+     * 参数模型 （前端不展示）
      */
-    SERVICE_PARAM(6,"service_param"),
+    PARAM(6,"Param"),
+    /**
+     * 分页参数模型 （前端不展示）
+     */
+    PAGE_PARAM(7,"PageParam"),
+    /**
+     * 前端视图模型 （前端不展示）
+     */
+    VO(8,"VO"),
+    /**
+     * 请求模型 （前端不展示）
+     */
+    REQUEST(9,"Request"),
+    /**
+     * 请求分页模型 （前端不展示）
+     */
+    PAGE_REQUEST(10,"PageRequest"),
+    /**
+     * 响应模型 （前端不展示）
+     */
+    RESPONSE(11,"Response"),
 
     ;
 

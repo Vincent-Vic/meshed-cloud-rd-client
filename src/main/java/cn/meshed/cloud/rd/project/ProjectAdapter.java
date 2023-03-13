@@ -16,6 +16,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
@@ -56,7 +57,7 @@ public interface ProjectAdapter {
      */
     @ApiOperation(value = "新增项目")
     @PostMapping("/save")
-    Response save(@Valid ProjectCmd projectCmd);
+    Response save(@Valid  @RequestBody ProjectCmd projectCmd);
 
     /**
      * 变更项目
@@ -66,7 +67,7 @@ public interface ProjectAdapter {
      * @return {@link Response}
      */
     @PostMapping("/change/{type}/{uuid}")
-    Response change(@PathVariable("type") ProjectTypeEnum type, @PathVariable("uuid") String uuid, @Valid ProjectChangeCmd projectChangeCmd);
+    Response change(@PathVariable("type") ProjectTypeEnum type, @PathVariable("uuid") String uuid, @Valid  @RequestBody ProjectChangeCmd projectChangeCmd);
 
     /**
      * 检查key是否唯一性
