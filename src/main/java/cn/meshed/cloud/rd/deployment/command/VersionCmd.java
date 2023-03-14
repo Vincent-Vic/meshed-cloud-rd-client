@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "版本操作数据")
+@Schema(description = "版本操作数据")
 public class VersionCmd extends Command {
 
     private static final long serialVersionUID = 1L;

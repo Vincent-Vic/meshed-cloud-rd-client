@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "版本发布查询模型")
+@Schema(description = "版本发布查询模型")
 public class VersionReleaseCountQry extends Query {
     /**
      * 项目唯一标识

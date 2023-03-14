@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "仓库详情传输数据模型")
+@Schema(description = "仓库详情传输数据模型")
 public class WarehouseDetailDTO extends DTO {
 
     /**

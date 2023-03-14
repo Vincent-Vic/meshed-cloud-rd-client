@@ -15,28 +15,28 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "模型分页查询参数")
+@Schema(description = "模型分页查询参数")
 public class ModelPageQry extends PageQuery {
 
     /**
      * 项目唯一标识
      */
-    @Schema(title = "项目唯一标识")
+    @Schema(description = "项目唯一标识")
     private String projectKey;
     /**
      * 关键字
      */
-    @Schema(title = "关键字")
+    @Schema(description = "关键字")
     private String keyword;
     /**
      * 类型
      */
-    @Schema(title = "类型")
+    @Schema(description = "类型")
     private ModelTypeEnum type;
     /**
      * 发行状态
      */
-    @Schema(title = "发行状态")
+    @Schema(description = "发行状态")
     private ReleaseStatusEnum releaseStatus;
 
 }

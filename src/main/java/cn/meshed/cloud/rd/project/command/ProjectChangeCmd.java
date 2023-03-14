@@ -17,20 +17,20 @@ import javax.validation.constraints.NotNull;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "项目操作数据")
+@Schema(description = "项目操作数据")
 public class ProjectChangeCmd extends Command {
 
     /**
      * uuid
      */
-    @Schema(title = "项目通用唯一编码")
+    @Schema(description = "项目通用唯一编码")
     @NotBlank(message = "项目通用唯一编码")
     private String uuid;
 
     /**
      * type
      */
-    @Schema(title = "项目类型")
+    @Schema(description = "项目类型")
     @NotNull(message = "项目类型")
     private ProjectTypeEnum type;
 

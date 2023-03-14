@@ -15,7 +15,7 @@ import javax.validation.constraints.NotBlank;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "方法查询参数")
+@Schema(description = "方法查询参数")
 public class ServiceByMethodQry extends Query {
     /**
      * method

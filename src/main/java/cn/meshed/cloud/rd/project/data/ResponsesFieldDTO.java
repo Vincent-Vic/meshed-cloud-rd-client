@@ -12,7 +12,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "响应字段模型")
+@Schema(description = "响应字段模型")
 public class ResponsesFieldDTO extends BaseFieldDTO {
 
 }

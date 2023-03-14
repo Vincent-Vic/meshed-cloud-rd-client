@@ -14,22 +14,22 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "方法查询参数")
+@Schema(description = "方法查询参数")
 public class ServiceByClassNameQry extends Query {
     /**
      * 类型
      */
-    @Schema(title = "类型")
+    @Schema(description = "类型")
     private ServiceTypeEnum type;
     /**
      * 控制器
      */
-    @Schema(title = "控制器")
+    @Schema(description = "控制器")
     private String control;
     /**
      * 项目唯一标识
      */
-    @Schema(title = "项目唯一标识")
+    @Schema(description = "项目唯一标识")
     private String projectKey;
 
 }

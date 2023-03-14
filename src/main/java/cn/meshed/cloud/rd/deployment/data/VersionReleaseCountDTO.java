@@ -13,6 +13,6 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "版本统计数据模型")
+@Schema(description = "版本统计数据模型")
 public class VersionReleaseCountDTO extends DTO {
 }

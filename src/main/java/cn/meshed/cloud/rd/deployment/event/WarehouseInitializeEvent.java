@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "仓库信息创建完成后初始化事件")
+@Schema(description = "仓库信息创建完成后初始化事件")
 public class WarehouseInitializeEvent extends SecurityEvent {
     /**
      * 项目标识

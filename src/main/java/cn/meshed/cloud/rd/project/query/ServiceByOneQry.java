@@ -15,27 +15,27 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "服务查询参数")
+@Schema(description = "服务查询参数")
 public class ServiceByOneQry extends Query {
 
     /**
      * uuid
      */
-    @Schema(title = "通用唯一编码")
+    @Schema(description = "通用唯一编码")
     private String uuid;
     /**
      * 项目唯一标识
      */
-    @Schema(title = "项目唯一标识")
+    @Schema(description = "项目唯一标识")
     private String projectKey;
     /**
      * 操作类型
      */
-    @Schema(title = "操作类型")
+    @Schema(description = "操作类型")
     private OperateEnum operate;
     /**
      * 类型
      */
-    @Schema(title = "服务类型")
+    @Schema(description = "服务类型")
     private ServiceTypeEnum type;
 }

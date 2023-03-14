@@ -16,60 +16,60 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "服务传输数据")
+@Schema(description = "服务传输数据")
 public class ServiceDTO {
 
     /**
      * uuid
      */
-    @Schema(title = "通用唯一编码")
+    @Schema(description = "通用唯一编码")
     private String uuid;
     /**
      * 模型中文名
      */
-    @Schema(title = "模型中文名")
+    @Schema(description = "模型中文名")
     private String name;
 
     /**
      * URI
      */
-    @Schema(title = "URI")
+    @Schema(description = "URI")
     private String uri;
 
     /**
      * 请求类型
      */
-    @Schema(title = "请求类型")
+    @Schema(description = "请求类型")
     private RequestTypeEnum requestType;
 
     /**
      * 控制器实体类名
      */
-    @Schema(title = "控制器实体类名")
+    @Schema(description = "控制器实体类名")
     private String className;
 
     /**
      * 版本
      */
-    @Schema(title = "版本")
+    @Schema(description = "版本")
     private String version;
 
     /**
      * 类型
      */
-    @Schema(title = "类型")
+    @Schema(description = "类型")
     private ServiceTypeEnum type;
 
     /**
      * 模型作用
      */
-    @Schema(title = "模型作用")
+    @Schema(description = "模型作用")
     private ServiceModelStatusEnum status;
 
     /**
      * 版本状态
      */
-    @Schema(title = "版本状态")
+    @Schema(description = "版本状态")
     private ReleaseStatusEnum releaseStatus;
 
 }

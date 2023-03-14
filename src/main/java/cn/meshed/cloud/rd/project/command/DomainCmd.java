@@ -15,26 +15,26 @@ import javax.validation.constraints.NotBlank;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "领域操作数据")
+@Schema(description = "领域操作数据")
 public class DomainCmd extends Command {
 
     /**
      * 项目标识
      */
-    @Schema(title = "项目唯一标识")
+    @Schema(description = "项目唯一标识")
     @NotBlank(message = "项目唯一标识不能为空")
     private String projectKey;
 
     /**
      * 名称
      */
-    @Schema(title = "领域名称")
+    @Schema(description = "领域名称")
     @NotBlank(message = "领域名称")
     private String name;
     /**
      * 领域唯一标识 符合Java 类名规范
      */
-    @Schema(title = "领域唯一标识")
+    @Schema(description = "领域唯一标识")
     @NotBlank(message = "领域唯一标识不能为空")
     private String key;
 

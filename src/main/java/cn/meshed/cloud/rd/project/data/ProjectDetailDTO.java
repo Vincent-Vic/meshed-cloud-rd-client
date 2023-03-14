@@ -12,7 +12,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "项目详情传输模型")
+@Schema(description = "项目详情传输模型")
 public class ProjectDetailDTO extends ProjectDTO {
 
 }

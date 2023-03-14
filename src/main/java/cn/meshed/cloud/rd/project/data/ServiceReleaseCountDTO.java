@@ -12,6 +12,6 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "服务版本统计传输数据")
+@Schema(description = "服务版本统计传输数据")
 public class ServiceReleaseCountDTO {
 }

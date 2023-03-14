@@ -16,27 +16,27 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "项目分页查询参数")
+@Schema(description = "项目分页查询参数")
 public class ProjectPageQry extends PageQuery {
 
     /**
      * 关键字
      */
-    @Schema(title = "关键字")
+    @Schema(description = "关键字")
     private String keyword;
     /**
      * 类型
      */
-    @Schema(title = "项目类型")
+    @Schema(description = "项目类型")
     private ProjectTypeEnum type;
     /**
      * 授权模式
      */
-    @Schema(title = "授权模式")
+    @Schema(description = "授权模式")
     private ProjectAccessModeEnum accessMode;
     /**
      * 访问类型
      */
-    @Schema(title = "访问类型")
+    @Schema(description = "访问类型")
     private ProjectVisitTypeEnum visitType;
 }

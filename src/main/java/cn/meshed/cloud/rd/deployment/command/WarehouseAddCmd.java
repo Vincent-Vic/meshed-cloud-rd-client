@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "逻辑仓库新增")
+@Schema(description = "逻辑仓库新增")
 public class WarehouseAddCmd extends Command {
 
     /**

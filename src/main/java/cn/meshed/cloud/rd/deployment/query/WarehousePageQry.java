@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "仓库分页查询模型")
+@Schema(description = "仓库分页查询模型")
 public class WarehousePageQry extends PageQuery {
     /**
      * 项目唯一标识

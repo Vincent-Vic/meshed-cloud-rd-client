@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "版本分页查询模型")
+@Schema(description = "版本分页查询模型")
 public class VersionPageQry extends PageQuery {
     /**
      * 项目唯一标识

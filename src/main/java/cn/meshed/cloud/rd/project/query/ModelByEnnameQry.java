@@ -14,22 +14,22 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "模型英文名查询参数")
+@Schema(description = "模型英文名查询参数")
 public class ModelByEnnameQry extends Query {
     /**
      * className
      */
-    @Schema(title = "类名前缀")
+    @Schema(description = "类名前缀")
     private String enname;
     /**
      * 类型
      */
-    @Schema(title = "模型类型")
+    @Schema(description = "模型类型")
     private ModelTypeEnum type;
     /**
      * 项目唯一标识
      */
-    @Schema(title = "项目唯一标识")
+    @Schema(description = "项目唯一标识")
     private String projectKey;
 
 }

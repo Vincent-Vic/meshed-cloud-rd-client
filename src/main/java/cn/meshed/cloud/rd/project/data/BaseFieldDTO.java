@@ -14,27 +14,27 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = false)
 @Data
-@Schema(title = "基础字段传输模型")
+@Schema(description = "基础字段传输模型")
 public class BaseFieldDTO extends DTO {
 
     /**
      * 字段名称
      */
-    @Schema(title = "字段名称")
+    @Schema(description = "字段名称")
     private String fieldName;
     /**
      * 字段类型
      */
-    @Schema(title = "字段类型")
+    @Schema(description = "字段类型")
     private String fieldType;
     /**
      * 泛型
      */
-    @Schema(title = "字段类型")
+    @Schema(description = "字段类型")
     private BaseGenericsEnum generic;
     /**
      * 描述
      */
-    @Schema(title = "字段类型")
+    @Schema(description = "字段类型")
     private String explain;
 }
