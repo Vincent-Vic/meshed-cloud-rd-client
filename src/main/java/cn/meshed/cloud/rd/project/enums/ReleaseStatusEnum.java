@@ -19,21 +19,21 @@ public enum ReleaseStatusEnum {
     /**
      * 编辑中
      */
-    EDIT(1,"edit"),
+    EDIT(1, "edit"),
     /**
      * 待发布
      */
-    PROCESSING(2,"processing"),
+    PROCESSING(2, "processing"),
 
     /**
      * 快照发布
      */
-    SNAPSHOT(3,"snapshot"),
+    SNAPSHOT(3, "snapshot"),
 
     /**
      * 正式发布
      */
-    RELEASE(3,"release"),
+    RELEASE(3, "release"),
 
     ;
 

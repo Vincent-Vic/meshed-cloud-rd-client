@@ -3,6 +3,8 @@ package cn.meshed.cloud.rd.project;
 import cn.meshed.cloud.rd.project.command.DomainCmd;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,20 +24,23 @@ import java.util.List;
 public interface DomainAdapter {
 
     /**
-     * 领域统计
-     * @param projectKey 项目key
+     * 领域选项
+     *
+     * @param projectKey 项目唯一标识
      * @return {@link SingleResponse<List<String>>}
      */
+    @Operation(summary = "领域选项")
     @GetMapping("/select/{projectKey}")
-    SingleResponse<List<String>> select(@PathVariable("projectKey") String projectKey);
+    SingleResponse<List<String>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
 
     /**
-     * 领域统计
-     * @param domainCmd 项目key
+     * 领域新增
+     *
+     * @param domainCmd 项目唯一标识
      * @return {@link Response}
      */
+    @Operation(summary = "领域新增")
     @PostMapping("/add")
-    Response add(@Valid  @RequestBody DomainCmd domainCmd);
-
+    Response add(@Parameter(description = "新增参数") @Valid @RequestBody DomainCmd domainCmd);
 
 }

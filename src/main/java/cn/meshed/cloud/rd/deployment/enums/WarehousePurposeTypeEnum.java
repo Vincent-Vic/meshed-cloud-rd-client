@@ -17,23 +17,23 @@ public enum WarehousePurposeTypeEnum {
     /**
      * 服务
      */
-    SERVICE(1,"IMAGES"),
+    SERVICE(1, "IMAGES"),
     /**
      * 前端
      */
-    PAGE(2,"page"),
+    PAGE(2, "page"),
     /**
      * 控制台
      */
-    CONSOLE(3,"page"),
+    CONSOLE(3, "page"),
     /**
      * 客户端
      */
-    CLIENT(4,"MAVEN"),
+    CLIENT(4, "MAVEN"),
     /**
      * 组件
      */
-    ASSEMBLY(5,"MAVEN"),
+    ASSEMBLY(5, "MAVEN"),
 
     ;
 

@@ -18,11 +18,11 @@ public enum WarehouseAccessModeEnum {
     /**
      * 私有
      */
-    PRIVATE(0,"private"),
+    PRIVATE(0, "private"),
     /**
      * 公开
      */
-    PUBLIC(1,"public"),
+    PUBLIC(1, "public"),
 
     ;
 

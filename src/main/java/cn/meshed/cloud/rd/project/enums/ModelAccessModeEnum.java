@@ -18,15 +18,15 @@ public enum ModelAccessModeEnum {
     /**
      * 私有
      */
-    PRIVATE(0,"private"),
+    PRIVATE(0, "private"),
     /**
      * 公开
      */
-    PUBLIC(1,"public"),
+    PUBLIC(1, "public"),
     /**
      * 保护 项目内可见
      */
-    PROTECTED(2,"protected"),
+    PROTECTED(2, "protected"),
 
     ;
 

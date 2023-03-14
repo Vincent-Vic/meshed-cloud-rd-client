@@ -18,7 +18,7 @@ public enum OperateEnum {
     /**
      * 创建
      */
-    NEW(1,"new"),
+    NEW(1, "new"),
     /**
      * 编辑
      */

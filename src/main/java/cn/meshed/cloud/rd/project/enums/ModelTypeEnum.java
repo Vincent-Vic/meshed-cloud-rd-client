@@ -16,49 +16,49 @@ import lombok.ToString;
 public enum ModelTypeEnum {
 
     /**
-     *操作模型
+     * 操作模型
      */
-    COMMAND(1,"Cmd"),
+    COMMAND(1, "Cmd"),
     /**
-     *查询模型
+     * 查询模型
      */
-    QUERY(2,"Qry"),
+    QUERY(2, "Qry"),
     /**
-     *数据模型
+     * 数据模型
      */
-    DTO(3,"DTO"),
+    DTO(3, "DTO"),
     /**
-     *枚举模型
+     * 枚举模型
      */
-    ENUMS(4,"Enum"),
+    ENUMS(4, "Enum"),
     /**
-     *事件模型
+     * 事件模型
      */
-    EVENT(5,"Event"),
+    EVENT(5, "Event"),
     /**
      * 参数模型 （前端不展示）
      */
-    PARAM(6,"Param"),
+    PARAM(6, "Param"),
     /**
      * 分页参数模型 （前端不展示）
      */
-    PAGE_PARAM(7,"PageParam"),
+    PAGE_PARAM(7, "PageParam"),
     /**
      * 前端视图模型 （前端不展示）
      */
-    VO(8,"VO"),
+    VO(8, "VO"),
     /**
      * 请求模型 （前端不展示）
      */
-    REQUEST(9,"Request"),
+    REQUEST(9, "Request"),
     /**
      * 请求分页模型 （前端不展示）
      */
-    PAGE_REQUEST(10,"PageRequest"),
+    PAGE_REQUEST(10, "PageRequest"),
     /**
      * 响应模型 （前端不展示）
      */
-    RESPONSE(11,"Response"),
+    RESPONSE(11, "Response"),
 
     ;
 

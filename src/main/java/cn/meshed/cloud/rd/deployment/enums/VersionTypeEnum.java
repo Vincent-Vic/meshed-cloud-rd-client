@@ -17,11 +17,11 @@ public enum VersionTypeEnum {
     /**
      * 制品库
      */
-    MAVEN(1,"maven"),
+    MAVEN(1, "maven"),
     /**
      * 镜像
      */
-    IMAGES(2,"images"),
+    IMAGES(2, "images"),
 
     ;
 

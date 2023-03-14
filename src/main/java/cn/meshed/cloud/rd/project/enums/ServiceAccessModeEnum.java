@@ -18,15 +18,15 @@ public enum ServiceAccessModeEnum {
     /**
      * 匿名
      */
-    ANONYMOUS(0,"anonymous"),
+    ANONYMOUS(0, "anonymous"),
     /**
      * 登入
      */
-    LOGIN(1,"login"),
+    LOGIN(1, "login"),
     /**
      * 授权
      */
-    AUTHORIZE(3,"authorize"),
+    AUTHORIZE(3, "authorize"),
     ;
 
     private final int value;

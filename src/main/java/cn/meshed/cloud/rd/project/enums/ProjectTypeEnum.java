@@ -17,15 +17,15 @@ public enum ProjectTypeEnum {
     /**
      * 应用服务
      */
-    SERVICE(1,"service"),
+    SERVICE(1, "service"),
     /**
      * 组件设施
      */
-    ASSEMBLY(2,"assembly"),
+    ASSEMBLY(2, "assembly"),
     /**
      * 生态设施
      */
-    INFRASTRUCTURE(3,"infrastructure"),
+    INFRASTRUCTURE(3, "infrastructure"),
     ;
 
     private final int value;

@@ -18,29 +18,29 @@ public enum WarehouseRepoTypeEnum {
     /**
      * 未知类型： 无法识别出仓库端
      */
-    UNKNOWN(1,"unknown"),
+    UNKNOWN(1, "unknown"),
 
     /**
      * 云效仓库 系统研发默认方案
      */
-    CODEUP(1,"codeup.aliyun.com"),
+    CODEUP(1, "codeup.aliyun.com"),
 
     /**
      * github
      */
-    GITHUB(2,"github.com"),
+    GITHUB(2, "github.com"),
     /**
      * gitee
      */
-    GITEE(2,"gitee.com"),
+    GITEE(2, "gitee.com"),
     /**
      * gitlab
      */
-    GITLAB(2,"gitlab.com"),
+    GITLAB(2, "gitlab.com"),
     /**
      * coding
      */
-    CODING(3,"coding.net"),
+    CODING(3, "coding.net"),
 
     ;
 

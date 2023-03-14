@@ -19,27 +19,27 @@ public enum RequestTypeEnum {
     /**
      * Get类型
      */
-    GET(1,"get"),
+    GET(1, "get"),
     /**
      * Post类型
      */
-    POST(2,"post"),
+    POST(2, "post"),
     /**
      * Put类型
      */
-    PUT(3,"put"),
+    PUT(3, "put"),
     /**
      * Delete类型
      */
-    DELETE(4,"delete"),
+    DELETE(4, "delete"),
     /**
      * Patch类型
      */
-    PATCH(5,"patch"),
+    PATCH(5, "patch"),
     /**
      * RPC类型 非Http请求类型
      */
-    RPC(5,"patch"),
+    RPC(5, "patch"),
     ;
 
     private final int value;

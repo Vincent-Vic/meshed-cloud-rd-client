@@ -1,18 +1,12 @@
 package cn.meshed.cloud.rd.project;
 
-import cn.meshed.cloud.rd.project.command.ServiceCmd;
 import cn.meshed.cloud.rd.project.command.ServiceGroupCmd;
-import cn.meshed.cloud.rd.project.data.ServiceDTO;
-import cn.meshed.cloud.rd.project.data.ServiceDetailDTO;
 import cn.meshed.cloud.rd.project.data.ServiceGroupDTO;
-import cn.meshed.cloud.rd.project.data.ServiceReleaseCountDTO;
 import cn.meshed.cloud.rd.project.query.ServiceByClassNameQry;
-import cn.meshed.cloud.rd.project.query.ServiceByMethodQry;
-import cn.meshed.cloud.rd.project.query.ServiceByOneQry;
-import cn.meshed.cloud.rd.project.query.ServicePageQry;
-import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,9 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 
 /**
- * <h1>服务适配器</h1>
+ * <h1>服务分组适配器</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -33,11 +28,13 @@ public interface ServiceGroupAdapter {
 
     /**
      * 服务分组选择获取
-     * @param projectKey 项目key
+     *
+     * @param projectKey 项目唯一标识
      * @return {@link SingleResponse< List <ServiceGroupDTO>>}
      */
+    @Operation(summary = "服务分组选项")
     @GetMapping("/select/{projectKey}")
-    SingleResponse<List<ServiceGroupDTO>> select(@PathVariable("projectKey") String projectKey);
+    SingleResponse<Set<ServiceGroupDTO>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
 
     /**
      * 保存功能
@@ -45,16 +42,18 @@ public interface ServiceGroupAdapter {
      * @param serviceGroupCmd 服务分组数据
      * @return {@link Response}
      */
+    @Operation(summary = "服务分组保存")
     @PostMapping("/save")
-    Response save(@Valid @RequestBody ServiceGroupCmd serviceGroupCmd);
+    Response save(@Parameter(description = "服务分组数据") @Valid @RequestBody ServiceGroupCmd serviceGroupCmd);
 
     /**
-     * 检查方法是否可用（控制器中唯一性）
+     * 检查类名是否可用（控制器中唯一性）
      *
      * @param serviceByClassNameQry 检查参数
      * @return {@link Response}
      */
-    @GetMapping("/check/method")
-    Response checkClassName(@Valid ServiceByClassNameQry serviceByClassNameQry);
+    @Operation(summary = "检查类名是否可用")
+    @GetMapping("/check/class/name")
+    Response checkClassName(@Parameter(description = "类名检查参数") @Valid ServiceByClassNameQry serviceByClassNameQry);
 
 }

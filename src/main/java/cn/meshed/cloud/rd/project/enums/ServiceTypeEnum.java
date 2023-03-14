@@ -17,15 +17,15 @@ public enum ServiceTypeEnum {
     /**
      * RESTful类型
      */
-    API(1,"Adapter"),
+    API(1, "Adapter"),
     /**
-     *dubbo类型
+     * dubbo类型
      */
-    RPC(2,"Rpc"),
+    RPC(2, "Rpc"),
     /**
-     *sdk类型
+     * sdk类型
      */
-    SDK(3,"Handler"),
+    SDK(3, "Handler"),
     ;
 
     private final int value;

@@ -18,19 +18,19 @@ public enum ProjectAccessModeEnum {
     /**
      * 正常研发
      */
-    NONE(1,"none"),
+    NONE(1, "none"),
     /**
      * 公共库
      */
-    PUBLIC(2,"public"),
+    PUBLIC(2, "public"),
     /**
      * 核心涉密
      */
-    CORE(3,"core"),
+    CORE(3, "core"),
     /**
      * 内部开源
      */
-    INNER_SOURCE(4,"inner_source"),
+    INNER_SOURCE(4, "inner_source"),
     ;
 
     private final int value;

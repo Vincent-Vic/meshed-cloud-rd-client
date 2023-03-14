@@ -17,35 +17,35 @@ public enum ServiceModelStatusEnum {
     /**
      * 信息登记状态
      */
-    REGISTER(0,"register"),
+    REGISTER(0, "register"),
     /**
-     *发行状态
+     * 发行状态
      */
-    RELEASE(1,"release"),
+    RELEASE(1, "release"),
     /**
-     *研发状态
+     * 研发状态
      */
-    DEV(2,"dev"),
+    DEV(2, "dev"),
     /**
-     *测试状态
+     * 测试状态
      */
-    TEST(3,"test"),
+    TEST(3, "test"),
     /**
-     *废弃状态
+     * 废弃状态
      */
-    DEPRECATED(4,"deprecated"),
+    DEPRECATED(4, "deprecated"),
     /**
-     *异常状态
+     * 异常状态
      */
-    BUG(5,"bug"),
+    BUG(5, "bug"),
     /**
-     *下线状态
+     * 下线状态
      */
-    OFF(6,"off"),
+    OFF(6, "off"),
     /**
-     *异常状态
+     * 异常状态
      */
-    ERROR(7,"error"),
+    ERROR(7, "error"),
 
     ;
 

@@ -17,19 +17,19 @@ public enum WarehouseStatusEnum {
     /**
      * 正常
      */
-    NORMAL(1,"normal"),
+    NORMAL(1, "normal"),
     /**
      * 初始化中（脚手架创建项目先登记信息）
      */
-    INIT(2,"init"),
+    INIT(2, "init"),
     /**
      * 构建/导入失败
      */
-    FAIL(3,"fail"),
+    FAIL(3, "fail"),
     /**
      * 导入无权限
      */
-    UNAUTHORIZED(4,"unauthorized"),
+    UNAUTHORIZED(4, "unauthorized"),
 
     ;
 

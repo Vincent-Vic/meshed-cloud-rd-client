@@ -3,7 +3,9 @@ package cn.meshed.cloud.rd.deployment.data;
 import cn.meshed.cloud.rd.deployment.enums.VersionStatusEnum;
 import cn.meshed.cloud.rd.deployment.enums.VersionTypeEnum;
 import com.alibaba.cola.dto.DTO;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * <h1>版本传输数据模型</h1>
@@ -11,7 +13,9 @@ import lombok.Data;
  * @author Vincent Vic
  * @version 1.0
  */
+@EqualsAndHashCode(callSuper = false)
 @Data
+@Schema(title = "版本传输数据模型")
 public class VersionDTO extends DTO {
     /**
      * id

@@ -17,15 +17,15 @@ public enum ProjectVisitTypeEnum {
     /**
      * 活跃项目
      */
-    LATELY(1,"lately"),
+    LATELY(1, "lately"),
     /**
      * 参与的项目
      */
-    MEMBER(2,"member"),
+    MEMBER(2, "member"),
     /**
      * 负责项目
      */
-    OWNER(3,"owner"),
+    OWNER(3, "owner"),
     ;
 
     private final int value;

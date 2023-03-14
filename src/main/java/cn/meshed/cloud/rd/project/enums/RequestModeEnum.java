@@ -17,19 +17,19 @@ public enum RequestModeEnum {
     /**
      * 多参数
      */
-    MULTIPLE(1,"multiple"),
+    MULTIPLE(1, "multiple"),
     /**
      * 表单
      */
-    FORM(2,"form"),
+    FORM(2, "form"),
     /**
      * JSON
      */
-    JSON(3,"json"),
+    JSON(3, "json"),
     /**
      * 分页
      */
-    PAGE(4,"page"),
+    PAGE(4, "page"),
 
     ;
 

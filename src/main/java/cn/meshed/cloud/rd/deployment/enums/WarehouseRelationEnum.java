@@ -18,15 +18,15 @@ public enum WarehouseRelationEnum {
     /**
      * 平台构建
      */
-    BUILD(1,"build"),
+    BUILD(1, "build"),
     /**
      * 其他仓库导入
      */
-    IMPORT(2,"import"),
+    IMPORT(2, "import"),
     /**
      * 不具备导入条件仅为登记
      */
-    REGISTER(3,"register"),
+    REGISTER(3, "register"),
     ;
 
     private final int value;

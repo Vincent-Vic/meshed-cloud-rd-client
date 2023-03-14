@@ -1,7 +1,9 @@
 package cn.meshed.cloud.rd.deployment.event;
 
 import cn.meshed.cloud.dto.SecurityEvent;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * <h1>仓库信息创建完成后初始化事件</h1>
@@ -9,7 +11,9 @@ import lombok.Data;
  * @author Vincent Vic
  * @version 1.0
  */
+@EqualsAndHashCode(callSuper = false)
 @Data
+@Schema(title = "仓库信息创建完成后初始化事件")
 public class WarehouseInitializeEvent extends SecurityEvent {
     /**
      * 项目标识

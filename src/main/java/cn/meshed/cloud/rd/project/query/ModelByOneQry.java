@@ -3,30 +3,38 @@ package cn.meshed.cloud.rd.project.query;
 import cn.meshed.cloud.rd.project.enums.OperateEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
 import com.alibaba.cola.dto.Query;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
- * <h1></h1>
+ * <h1>模型查询参数</h1>
  *
  * @author Vincent Vic
  * @version 1.0
  */
+@EqualsAndHashCode(callSuper = false)
 @Data
+@Schema(title = "模型查询参数")
 public class ModelByOneQry extends Query {
     /**
      * uuid
      */
+    @Schema(title = "通用唯一编码")
     private String uuid;
     /**
-     * 项目key
+     * 项目唯一标识
      */
+    @Schema(title = "项目唯一标识")
     private String projectKey;
     /**
      * 操作类型
      */
+    @Schema(title = "操作类型")
     private OperateEnum operate;
     /**
      * 类型
      */
+    @Schema(title = "模型类型")
     private ServiceTypeEnum type;
 }

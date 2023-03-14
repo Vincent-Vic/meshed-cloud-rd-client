@@ -7,15 +7,15 @@ import cn.meshed.cloud.rd.project.data.ProjectDTO;
 import cn.meshed.cloud.rd.project.data.ProjectDetailDTO;
 import cn.meshed.cloud.rd.project.enums.ProjectTypeEnum;
 import cn.meshed.cloud.rd.project.query.ProjectPageQry;
-import cn.meshed.cloud.rd.project.query.ServiceByMethodQry;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -36,28 +36,29 @@ public interface ProjectAdapter {
      * @param projectPageQry 项目分页查询
      * @return {@link PageResponse<ProjectDTO>}
      */
-    @ApiOperation(value = "列表")
+    @Operation(summary = "项目列表")
     @GetMapping("/list")
-    PageResponse<ProjectDTO> list(@Valid ProjectPageQry projectPageQry);
+    PageResponse<ProjectDTO> list(@Parameter(description = "分页参数") @Valid ProjectPageQry projectPageQry);
 
     /**
      * 详情
      *
-     * @param projectKey 项目key
+     * @param projectKey 项目唯一标识
      * @return {@link SingleResponse<ProjectDetailDTO>}
      */
+    @Operation(summary = "项目详情")
     @GetMapping("/details/{projectKey}")
-    SingleResponse<ProjectDetailDTO> details(@PathVariable("projectKey") String projectKey);
+    SingleResponse<ProjectDetailDTO> details(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
 
     /**
-     * 保存功能
+     * 发起项目（新增项目/申请项目）
      *
      * @param projectCmd 项目数据
      * @return {@link Response}
      */
-    @ApiOperation(value = "新增项目")
-    @PostMapping("/save")
-    Response save(@Valid  @RequestBody ProjectCmd projectCmd);
+    @Operation(summary = "发起项目")
+    @PutMapping("/apply")
+    Response apply(@Parameter(description = "项目操作数据") @Valid @RequestBody ProjectCmd projectCmd);
 
     /**
      * 变更项目
@@ -66,8 +67,10 @@ public interface ProjectAdapter {
      * @param uuid uuid
      * @return {@link Response}
      */
+    @Operation(summary = "变更项目")
     @PostMapping("/change/{type}/{uuid}")
-    Response change(@PathVariable("type") ProjectTypeEnum type, @PathVariable("uuid") String uuid, @Valid  @RequestBody ProjectChangeCmd projectChangeCmd);
+    Response change(@Parameter(description = "项目类型") @PathVariable("type") ProjectTypeEnum type, @Parameter(description = "项目通用编码") @PathVariable("uuid") String uuid,
+                    @Valid @RequestBody ProjectChangeCmd projectChangeCmd);
 
     /**
      * 检查key是否唯一性
@@ -75,7 +78,8 @@ public interface ProjectAdapter {
      * @param key key
      * @return {@link Response}
      */
+    @Operation(summary = "检查项目唯一标识")
     @GetMapping("/check/key/{key}")
-    Response checkKey(@PathVariable("key") String key);
+    Response checkKey(@Parameter(description = "项目唯一标识") @PathVariable("key") String key);
 
 }
