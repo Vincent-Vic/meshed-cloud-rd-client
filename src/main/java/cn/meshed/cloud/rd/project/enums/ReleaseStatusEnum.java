@@ -33,7 +33,7 @@ public enum ReleaseStatusEnum {
     /**
      * 正式发布
      */
-    RELEASE(3, "release"),
+    RELEASE(4, "release"),
 
     ;
 

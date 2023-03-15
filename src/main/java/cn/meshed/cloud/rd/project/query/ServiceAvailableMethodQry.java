@@ -16,16 +16,16 @@ import javax.validation.constraints.NotBlank;
 @EqualsAndHashCode(callSuper = false)
 @Data
 @Schema(description = "方法查询参数")
-public class ServiceByMethodQry extends Query {
+public class ServiceAvailableMethodQry extends Query {
     /**
      * method
      */
-    @NotBlank(message = "方法名称")
+    @NotBlank(message = "方法名称不能为空")
     private String method;
     /**
      * 服务分组编码
      */
-    @NotBlank(message = "分组编码")
+    @NotBlank(message = "分组编码不能为空")
     private String groupId;
 
 }

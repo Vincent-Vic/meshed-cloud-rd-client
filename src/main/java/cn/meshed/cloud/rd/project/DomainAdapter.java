@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 
 /**
  * <h1>领域适配器</h1>
@@ -31,7 +32,7 @@ public interface DomainAdapter {
      */
     @Operation(summary = "领域选项")
     @GetMapping("/select/{projectKey}")
-    SingleResponse<List<String>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
+    SingleResponse<Set<String>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
 
     /**
      * 领域新增
@@ -42,5 +43,16 @@ public interface DomainAdapter {
     @Operation(summary = "领域新增")
     @PostMapping("/add")
     Response add(@Parameter(description = "新增参数") @Valid @RequestBody DomainCmd domainCmd);
+
+    /**
+     * 检查领域标识是否可用
+     *
+     * @param key 领域key
+     * @return {@link Response}
+     */
+    @Operation(summary = "检查领域标识是否可用")
+    @GetMapping("/available/key/{key}")
+    Response availableKey(@Parameter(description = "领域唯一标识") @PathVariable("key") String key);
+
 
 }

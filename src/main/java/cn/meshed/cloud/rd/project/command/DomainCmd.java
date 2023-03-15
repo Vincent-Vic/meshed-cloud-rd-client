@@ -29,7 +29,7 @@ public class DomainCmd extends Command {
      * 名称
      */
     @Schema(description = "领域名称")
-    @NotBlank(message = "领域名称")
+    @NotBlank(message = "领域名称不能为空")
     private String name;
     /**
      * 领域唯一标识 符合Java 类名规范

@@ -79,7 +79,7 @@ public interface ProjectAdapter {
      * @return {@link Response}
      */
     @Operation(summary = "检查项目唯一标识")
-    @GetMapping("/check/key/{key}")
-    Response checkKey(@Parameter(description = "项目唯一标识") @PathVariable("key") String key);
+    @GetMapping("/available/key/{key}")
+    Response availableKey(@Parameter(description = "项目唯一标识") @PathVariable("key") String key);
 
 }

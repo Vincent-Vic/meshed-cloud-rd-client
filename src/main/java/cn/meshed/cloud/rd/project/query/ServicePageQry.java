@@ -1,7 +1,7 @@
 package cn.meshed.cloud.rd.project.query;
 
-import cn.meshed.cloud.rd.project.enums.ProjectAccessModeEnum;
 import cn.meshed.cloud.rd.project.enums.ReleaseStatusEnum;
+import cn.meshed.cloud.rd.project.enums.ServiceAccessModeEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
 import com.alibaba.cola.dto.PageQuery;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -35,6 +35,11 @@ public class ServicePageQry extends PageQuery {
     @Schema(description = "类型")
     private ServiceTypeEnum type;
     /**
+     * 服务分组所属领域key
+     */
+    @Schema(description = "服务分组所属领域key")
+    private String domain;
+    /**
      * 发行状态
      */
     @Schema(description = "发行状态")
@@ -43,5 +48,5 @@ public class ServicePageQry extends PageQuery {
      * 授权模式
      */
     @Schema(description = "授权模式")
-    private ProjectAccessModeEnum accessMode;
+    private ServiceAccessModeEnum accessMode;
 }

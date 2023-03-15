@@ -3,8 +3,7 @@ package cn.meshed.cloud.rd.project;
 import cn.meshed.cloud.rd.project.command.ModelCmd;
 import cn.meshed.cloud.rd.project.data.ModelDTO;
 import cn.meshed.cloud.rd.project.data.ModelDetailDTO;
-import cn.meshed.cloud.rd.project.query.ModelByEnnameQry;
-import cn.meshed.cloud.rd.project.query.ModelByOneQry;
+import cn.meshed.cloud.rd.project.query.ModelAvailableKeyQry;
 import cn.meshed.cloud.rd.project.query.ModelPageQry;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
@@ -18,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.Set;
 
 /**
  * <h1>数据模型适配器</h1>
@@ -46,7 +47,7 @@ public interface ModelAdapter {
      */
     @Operation(summary = "模型详情")
     @GetMapping("/details/{uuid}")
-    SingleResponse<ModelDetailDTO> details(@Parameter(description = "模型通用编码") @PathVariable("uuid") String uuid, @Parameter(description = "") @Valid ModelByOneQry modelByOneQry);
+    SingleResponse<ModelDetailDTO> details(@Parameter(description = "模型通用编码") @PathVariable("uuid") String uuid);
 
     /**
      * 保存功能
@@ -61,11 +62,21 @@ public interface ModelAdapter {
     /**
      * 检查英文名是否合法
      *
-     * @param modelByEnnameQry 检查参数
+     * @param modelAvailableKeyQry 检查参数
      * @return {@link Response}
      */
     @Operation(summary = "检查模型英文标识")
-    @GetMapping("/check/enname")
-    Response checkEnname(@Parameter(description = "模型英文标识查询参数") @Valid ModelByEnnameQry modelByEnnameQry);
+    @GetMapping("/available/key")
+    Response availableKey(@Parameter(description = "模型英文标识查询参数") @Valid ModelAvailableKeyQry modelAvailableKeyQry);
+
+    /**
+     * 模型选项
+     *
+     * @param projectKey 项目唯一标识
+     * @return {@link SingleResponse< List <String>>}
+     */
+    @Operation(summary = "模型选项")
+    @GetMapping("/select/{projectKey}")
+    SingleResponse<Set<String>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
 
 }

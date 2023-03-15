@@ -2,7 +2,8 @@ package cn.meshed.cloud.rd.project;
 
 import cn.meshed.cloud.rd.project.command.ServiceGroupCmd;
 import cn.meshed.cloud.rd.project.data.ServiceGroupDTO;
-import cn.meshed.cloud.rd.project.query.ServiceByClassNameQry;
+import cn.meshed.cloud.rd.project.data.ServiceGroupSelectDTO;
+import cn.meshed.cloud.rd.project.query.ServiceAvailableClassQry;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
 import io.swagger.v3.oas.annotations.Operation;
@@ -34,7 +35,7 @@ public interface ServiceGroupAdapter {
      */
     @Operation(summary = "服务分组选项")
     @GetMapping("/select/{projectKey}")
-    SingleResponse<Set<ServiceGroupDTO>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
+    SingleResponse<Set<ServiceGroupSelectDTO>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
 
     /**
      * 保存功能
@@ -49,11 +50,11 @@ public interface ServiceGroupAdapter {
     /**
      * 检查类名是否可用（控制器中唯一性）
      *
-     * @param serviceByClassNameQry 检查参数
+     * @param serviceAvailableClassQry 检查参数
      * @return {@link Response}
      */
     @Operation(summary = "检查类名是否可用")
-    @GetMapping("/check/class/name")
-    Response checkClassName(@Parameter(description = "类名检查参数") @Valid ServiceByClassNameQry serviceByClassNameQry);
+    @GetMapping("/available/class/name")
+    Response availableClassName(@Parameter(description = "类名检查参数") @Valid ServiceAvailableClassQry serviceAvailableClassQry);
 
 }
