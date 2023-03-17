@@ -2,6 +2,7 @@ package cn.meshed.cloud.rd.project.data;
 
 import cn.meshed.cloud.rd.project.enums.ReleaseStatusEnum;
 import cn.meshed.cloud.rd.project.enums.RequestTypeEnum;
+import cn.meshed.cloud.rd.project.enums.ServiceAccessModeEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceModelStatusEnum;
 import cn.meshed.cloud.rd.project.enums.ServiceTypeEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -31,10 +32,28 @@ public class ServiceDTO {
     private String name;
 
     /**
+     * 服务分组uri（URI前缀）
+     */
+    @Schema(description = "服务分组uri（URI前缀）")
+    private String preUri;
+
+    /**
      * URI
      */
     @Schema(description = "URI")
     private String uri;
+
+    /**
+     * 服务分组名称
+     */
+    @Schema(description = "服务分组名称")
+    private String groupName;
+
+    /**
+     * 服务分组ID
+     */
+    @Schema(description = "服务分组ID")
+    private String groupId;
 
     /**
      * 请求类型
@@ -52,13 +71,31 @@ public class ServiceDTO {
      * 版本
      */
     @Schema(description = "版本")
-    private String version;
+    private Long version;
+
+    /**
+     * 服务负责人
+     */
+    @Schema(description = "服务负责人")
+    private Long owner;
+
+    /**
+     * 服务授权码，用于注册身份安全
+     */
+    @Schema(description = "服务授权码")
+    private String identifier;
 
     /**
      * 类型
      */
     @Schema(description = "类型")
     private ServiceTypeEnum type;
+
+    /**
+     * 服务级别 当前仅支持跟随项目性质（组件）
+     */
+    @Schema(description = "服务级别")
+    private ServiceAccessModeEnum accessMode;
 
     /**
      * 模型作用

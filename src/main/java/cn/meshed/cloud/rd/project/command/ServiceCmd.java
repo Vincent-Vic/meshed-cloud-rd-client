@@ -57,12 +57,6 @@ public class ServiceCmd extends Command {
     @NotBlank(message = "服务中文解释不能为空")
     private String name;
     /**
-     * 类型
-     */
-    @Schema(description = "类型")
-    @NotNull(message = "类型不能为空")
-    private ServiceTypeEnum type;
-    /**
      * URI
      */
     @Schema(description = "URI")

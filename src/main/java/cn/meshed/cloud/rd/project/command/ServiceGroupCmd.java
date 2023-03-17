@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * <h1>服务新增</h1>
@@ -71,6 +72,6 @@ public class ServiceGroupCmd extends Command {
      * 服务类型 （className后缀）
      */
     @Schema(description = "服务类型")
-    @NotBlank(message = "服务类型不能为空")
+    @NotNull(message = "服务类型不能为空")
     private ServiceTypeEnum type;
 }

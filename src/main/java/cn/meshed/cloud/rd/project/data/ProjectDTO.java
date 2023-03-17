@@ -52,7 +52,7 @@ public class ProjectDTO {
      * 版本号
      */
     @Schema(description = "项目版本号")
-    private String version;
+    private Long version;
 
     /**
      * 负责人

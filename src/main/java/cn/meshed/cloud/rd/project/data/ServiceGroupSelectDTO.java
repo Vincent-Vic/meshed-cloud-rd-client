@@ -34,4 +34,10 @@ public class ServiceGroupSelectDTO {
     @Schema(description = "服务映射类名")
     private String className;
 
+    /**
+     * 服务类型
+     */
+    @Schema(description = "服务类型")
+    private ServiceTypeEnum type;
+
 }

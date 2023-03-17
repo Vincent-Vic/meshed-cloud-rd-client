@@ -21,7 +21,7 @@ public class ModelDetailDTO extends ModelDTO {
      * 模型英文名
      */
     @Schema(description = "模型英文名")
-    private String enname;
+    private String key;
     /**
      * 模型实体父类名称
      */

@@ -38,7 +38,7 @@ public class ModelCmd extends Command {
      */
     @Schema(description = "模型英文标识")
     @NotBlank(message = "模型英文标识不能为空")
-    private String enname;
+    private String key;
     /**
      * 模型父类
      */

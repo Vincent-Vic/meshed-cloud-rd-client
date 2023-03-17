@@ -3,6 +3,8 @@ package cn.meshed.cloud.rd.project;
 import cn.meshed.cloud.rd.project.command.ModelCmd;
 import cn.meshed.cloud.rd.project.data.ModelDTO;
 import cn.meshed.cloud.rd.project.data.ModelDetailDTO;
+import cn.meshed.cloud.rd.project.data.ModelReleaseCountDTO;
+import cn.meshed.cloud.rd.project.data.ServiceReleaseCountDTO;
 import cn.meshed.cloud.rd.project.query.ModelAvailableKeyQry;
 import cn.meshed.cloud.rd.project.query.ModelPageQry;
 import com.alibaba.cola.dto.PageResponse;
@@ -78,5 +80,15 @@ public interface ModelAdapter {
     @Operation(summary = "模型选项")
     @GetMapping("/select/{projectKey}")
     SingleResponse<Set<String>> select(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
+
+    /**
+     * jar统计
+     *
+     * @param projectKey 项目唯一标识
+     * @return {@link SingleResponse< ServiceReleaseCountDTO >}
+     */
+    @Operation(summary = "版本情况条件")
+    @GetMapping("/release/count/{projectKey}")
+    SingleResponse<ModelReleaseCountDTO> releaseCount(@Parameter(description = "项目唯一标识") @PathVariable("projectKey") String projectKey);
 
 }

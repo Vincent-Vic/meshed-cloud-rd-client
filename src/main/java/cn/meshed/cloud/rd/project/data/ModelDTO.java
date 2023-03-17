@@ -37,7 +37,7 @@ public class ModelDTO extends DTO {
      * 版本
      */
     @Schema(description = "版本")
-    private String version;
+    private Long version;
     /**
      * 领域
      */

@@ -26,13 +26,13 @@ public class VersionDTO extends DTO {
      */
     private String name;
     /**
-     * 版本项目全称代号
+     * 版本实体项目全称代号
      */
-    private String enname;
+    private String versionName;
     /**
      * 版本
      */
-    private String version;
+    private Long version;
     /**
      * 版本类型
      */
