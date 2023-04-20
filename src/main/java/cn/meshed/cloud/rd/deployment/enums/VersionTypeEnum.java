@@ -1,5 +1,6 @@
 package cn.meshed.cloud.rd.deployment.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
@@ -22,9 +23,14 @@ public enum VersionTypeEnum {
      * 镜像
      */
     IMAGES(2, "images"),
+    /**
+     * 镜像
+     */
+    PAGE(3, "page"),
 
     ;
 
+    @EnumValue
     private final int value;
-    private final String key;
+    private final String ext;
 }

@@ -1,4 +1,4 @@
-package cn.meshed.cloud.rd.project.enums;
+package cn.meshed.cloud.rd.deployment.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.AllArgsConstructor;
@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * <h1></h1>
+ * <h1>发布类型</h1>
  *
  * @author Vincent Vic
  * @version 1.0
@@ -14,22 +14,21 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @ToString
-public enum ServiceTypeEnum {
+public enum PublishTypeEnum {
+
     /**
-     * RESTful类型
+     * 客户端 (主维度)
      */
-    API(1, "Adapter"),
+    CLIENT(1,"CLIENT"),
+
     /**
-     * dubbo类型
+     * 服务 (子维度)
      */
-    RPC(2, "Rpc"),
-    /**
-     * sdk类型
-     */
-    SDK(3, "Handler"),
+    SERVICE(2,"SERVICE"),
     ;
 
     @EnumValue
     private final int value;
     private final String ext;
+
 }

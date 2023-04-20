@@ -1,5 +1,6 @@
 package cn.meshed.cloud.rd.deployment.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
@@ -21,11 +22,11 @@ public enum WarehousePurposeTypeEnum {
     /**
      * 前端
      */
-    PAGE(2, "page"),
+    PAGE(2, "PAGE"),
     /**
      * 控制台
      */
-    CONSOLE(3, "page"),
+    CONSOLE(3, "PAGE"),
     /**
      * 客户端
      */
@@ -37,6 +38,7 @@ public enum WarehousePurposeTypeEnum {
 
     ;
 
+    @EnumValue
     private final int value;
-    private final String key;
+    private final String ext;
 }
